@@ -7,6 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    request.setCharacterEncoding("utf-8");
+%>
 <html>
 <head>
     <title>Title</title>
@@ -23,7 +26,7 @@
 
 
     <h3>이름은 홍길동이고 나이가 20세 이상이라면 "성인입니다" 출력</h3><br>
-    <c:if test="${param.name eq '홍길동' and param.age eq '20'}">
+    <c:if test="${param.name eq '홍길동' and param.age eq 20}">
         <b>성인입니다</b>
     </c:if>
 
